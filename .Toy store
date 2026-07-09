@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f0f8ff;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.login{
+background:white;
+padding:30px;
+box-shadow:0px 0px 10px gray;
+border-radius:10px;
+}
+
+input{
+width:250px;
+padding:10px;
+margin:10px 0;
+}
+
+button{
+width:100%;
+padding:10px;
+background:blue;
+color:white;
+border:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login">
+
+<h2>Login</h2>
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="password" id="password" placeholder="Password">
+
+<br><br>
+
+<button onclick="login()">Login</button>
+
+</div>
+
+<script>
+
+function login(){
+
+var user=document.getElementById("username").value;
+var pass=document.getElementById("password").value;
+
+if(user=="admin" && pass=="1234")
+{
+window.location.href="home.html";
+}
+else
+{
+alert("Invalid Username or Password");
+}
+
+}
+
+</script>
+
+</body>
+</html>
